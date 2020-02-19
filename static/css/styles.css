@@ -17,9 +17,7 @@ body {
 
 /* Container Things */
 .custom-container {
-    margin-top: 50px;
     margin-bottom: 85px;
-    height: 25%;
 }
 
 .chart-container {
@@ -37,12 +35,20 @@ body {
 
 #columnpad {
     padding: 20px;
-    padding-top: 10px;
     background-color: #5888cc;
+    box-shadow: 5px 10px black;
 }
 
 #columnpad-inv {
     background: transparent;
+}
+
+.sidebar-spacing {
+    /* padding: 10px; */
+    padding-bottom: 10px;
+    margin-left: 15px;
+    background-color: #5888cc;
+    box-shadow: 5px 10px black;
 }
 
 .activestate {
@@ -64,6 +70,10 @@ p {
 #title-text {
     font-size: 50pt;
     line-height: 10pt;
+}
+
+.title-spacing {
+    margin-bottom: 25px;
 }
 
 .bold-text {

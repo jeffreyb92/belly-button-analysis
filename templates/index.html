@@ -54,20 +54,51 @@
 
   <!-- Container Start -->
   <div class="custom-container container-fluid">
-    <!--Normally these medium columns go full wide on small screen sizes-->
     <div class="row justify-content-around" id="rowpad">
-      <div class="col-md-7 h-100" id="columnpad">
-        <section class="sectionfont">About Me</section>
-        <hr>
-        <p> 
-        <a href="https://github.com/jeffreyb92" target="_blank"><img src="assets/images/github.svg" alt="github icon" width="50"></a>
-        <a href="https://linkedin.com/in/burgosjeffrey" target="_blank"><img src="assets/images/linkedin.svg" alt="linkedin icon" width="50"></a>
-        </p> 
-        
+      <div class="col-md-12 h-100" id="columnpad">
+        <p id="title-text"class="text-center title-spacing">Belly Button Biodiversity Dashboard</p>
+        <p class="text-center" style="font-size: 2em;">Use the interactive charts below to explore the dataset</p>
       </div>
-      <div class="col-md-4" id="columnpad-inv">
-        <img class="img-fluid max-width: 100%; height: auto;" id="img-padding" src="assets/images/JeffProfilePicture.jpg" alt="Jeff's Profile Picture"> 
-      </div>
+    </div>
+      <br>
+    <div class="row justify-content-start" id="rowpad">
+        <div class="col-md-2 sidebar-spacing">
+            <div class="row justify-content-start" id="rowpad">
+            <div class="col text-center">
+                <div class="dropdown">
+                    <p>Test Subject ID No.:</p>
+                    <select name="Belly-Button" id="selID">
+                        {% for id in belly%}
+                        <option value="{{belly.id}}">{{belly.id}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>  
+            </div>
+            <br>
+            <div class="col text-center">
+                <p>Demographic Info</p>
+                <hr>
+                <p> id: {{belly.id}}</p>
+                <p>ethnicity: {{belly.ethnicity}}</p>                    
+                <p>gender: {{belly.gender}}</p>                    
+                <p>age: {{belly.age}}</p>                   
+                <p>location: {{belly.location}}</p>                   
+                <p>bbtype: {{belly.bbtype}}</p>                   
+                <p>wfreq: {{belly.wfreq}}</p>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div id="pieplot"></div>
+        </div>
+        <div class="col-md-5">
+            <div id="accelplot"></div>
+        </div>
+    </div>
+    <div class="row justify-content-around" id="rowpad">
+        <div class="col-md-12">
+            <div id="bubbleplot"></div>
+        </div>
     </div>
 
   </div>
@@ -80,6 +111,7 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="../static/js/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
