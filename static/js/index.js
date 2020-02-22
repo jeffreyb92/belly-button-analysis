@@ -1,5 +1,5 @@
 function init() {
-    var sampledata = d3.json("../../data/samples.json").then((data) => {
+    d3.json("../../data/samples.json").then((data) => {
     
         var metadata = data.metadata;
         var samples = data.samples;
