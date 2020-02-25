@@ -4,11 +4,13 @@ function init() {
         var metadata = data.metadata;
         var samples = data.samples;
 
-
+        //FOR DROPDOWN MENU
         metadata.forEach((obj) => {
             var options = d3.select("#selID").append("option");
             options.text(`${obj.id}`).attr("value", `${obj.id}`);
         }) 
+
+        //DEMOGRAPHIC INSERTION
         d3.select("#demoid").text(`ID: ${metadata[0].id}`);
         d3.select("#demoethnic").text(`Ethnicity: ${metadata[0].ethnicity}`);
         d3.select("#demogender").text(`Gender: ${metadata[0].gender}`);
